@@ -9,13 +9,14 @@
 // $Id: transmitter.pde,v 1.3 2009/03/30 00:07:24 mikem Exp $
 
 #include <VirtualWire.h>
-#include <DHT.h>
-dht DHT;
+#include <dht11.h>
+
+dht11 DHT;
 
 const int led_pin = 11;
 const int transmit_pin = 12;
 const int dht_sensor_pin = 11;
-const String sensor_name = "coffee";
+const String sensor_name = "kitchen";
 const bool debug_mode = false;
 
 
@@ -48,7 +49,7 @@ void setup()
 
 void loop()
 {
-    int chk = DHT.read11(dht_sensor_pin);
+    int chk = DHT.read(dht_sensor_pin);
   switch (chk) {
     case DHTLIB_OK:
       break;
