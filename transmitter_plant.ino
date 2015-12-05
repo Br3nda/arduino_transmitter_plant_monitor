@@ -23,7 +23,7 @@ const bool debug_mode = false;
 #define SOIL_PIN_1 7
 #define SOIL_PIN_2 5
 #define SENSOR_PIN 0
-#define TIME_BETWEEN_SOIL_READINGS 1000
+#define TIME_BETWEEN_SOIL_READINGS 15000
 
 void setup()
 {
