@@ -33,18 +33,18 @@ void setup()
     Serial.println("Starting receiver");
   }
   
-    // Initialise the IO and ISR
-    vw_set_tx_pin(transmit_pin);
-    vw_set_ptt_inverted(true); // Required for DR3100
-    vw_setup(500);       // Bits per sec
-    pinMode(led_pin, OUTPUT);
-    
-    
-    //plant set up
-    //set up the plant sensor
-    pinMode(SOIL_PIN_1, OUTPUT);
-    pinMode(SOIL_PIN_2, OUTPUT);
-    pinMode(SENSOR_PIN, INPUT);    
+  // Initialise the IO and ISR
+  vw_set_tx_pin(transmit_pin);
+  vw_set_ptt_inverted(true); // Required for DR3100
+  vw_setup(500);       // Bits per sec
+  pinMode(led_pin, OUTPUT);
+  
+  
+  //plant set up
+  //set up the plant sensor
+  pinMode(SOIL_PIN_1, OUTPUT);
+  pinMode(SOIL_PIN_2, OUTPUT);
+  pinMode(SENSOR_PIN, INPUT);    
 }
 
 void loop()
